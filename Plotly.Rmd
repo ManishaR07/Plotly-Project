@@ -1,0 +1,26 @@
+---
+title: "Plotly"
+author: "Manisha Rana"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+---
+
+```{r setoptions,echo=TRUE}
+knitr::opts_chunk$set(echo=TRUE)
+```
+
+
+### R Markdown Presentation with Plotly 
+
+```{r}
+library(plotly)
+library(ggplot2)
+library(car)
+```
+
+```{r, warning=F}
+data("mtcars")
+suppressPackageStartupMessages({library(plotly)})
+plot_ly(mtcars, x = ~hp, y =~mpg,type='scatter',mode='markers')
+
+```
